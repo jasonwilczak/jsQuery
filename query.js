@@ -1,4 +1,4 @@
-var ? = (function ($) {
+var ʔ = (function ($) {
     //CONSTANTS - Start
     var queryControlIdPrefix = "queryControlDiv"; //Prefix for the query row control div id
     var tableQueryBuilder = "tableQueryBuilder";
