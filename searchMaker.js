@@ -27,6 +27,7 @@ var searchMaker = (function(){
 	
 	function initialize() {
 		console.log("Not implemented");
+		return true;
 	}
 	
 	return {
