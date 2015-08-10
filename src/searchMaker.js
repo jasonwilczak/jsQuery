@@ -1,4 +1,4 @@
-var searchMaker = (function(){
+define(function(){	
 	
 	function getUserSearches() {
 		console.log("Not implemented");
@@ -38,4 +38,4 @@ var searchMaker = (function(){
         PrimarySelectChanged: primarySelectChanged,
         GetUserSearches: getUserSearches
     };
-})();
+})

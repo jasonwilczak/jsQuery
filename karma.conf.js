@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Aug 05 2015 14:11:26 GMT-0400 (Eastern Daylight Time)
+// Generated on Mon Aug 10 2015 13:50:33 GMT-0400 (Eastern Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -10,19 +10,20 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'requirejs'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      '*.js',
-      'jasmineTests/*.js'
+      //{pattern: 'lib/**/*.js', included: false},
+      {pattern: 'src/**/*.js', included: false},
+      {pattern: 'test/**/*Spec.js', included: false},
+      'test/test-main.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-      "searchMaker_OLD.js"
     ],
 
 
@@ -48,7 +49,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -62,6 +63,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   })
 }
